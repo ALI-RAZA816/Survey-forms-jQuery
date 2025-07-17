@@ -1,0 +1,394 @@
+/* font link  */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* default CSS  */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body CSS  */
+
+body{
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(280deg,#2970FA,#6913CC);
+}
+
+.survery-form{
+    max-width: 880px;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0,.30);
+}
+
+.survery-header{
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(100deg,#2970FA,#6913CC);
+}
+
+.survery-header h1{
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.survery-header span{
+    color: #fff;
+    display: inline-block;
+    margin-top: .8rem !important;
+}
+
+#personal-information,
+#additional-comments,
+.feedback,
+#experience{
+    padding:2rem;
+}
+
+.survery-form .progress-bar{
+    height: 12px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+.survery-form .progress-bar > .progress{
+    height: 100%;
+    width:0;
+    border-radius:0;
+    transition: width .40s ease;
+    background-color: rgb(27, 182, 27);
+}
+
+
+#personal-information > h1,
+#additional-comments > h1,
+.feedback > h1,
+#experience > h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    margin-bottom: 2rem !important;
+}
+
+#personal-information > h1::before,
+#additional-comments > h1::before,
+.feedback > h1::before,
+#experience > h1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom:-.5rem;
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+}
+
+#personal-information .form-group label{
+    font-size: 1rem;
+    color: #333;
+}
+
+#personal-information .form-group input,
+#personal-information .form-group select{
+    height: 45px;
+}
+
+.survery-form .buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.survery-form .buttons button{
+    height: 50px;
+    width:200px;
+    border-radius:25px;
+    background: #3498DB;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 550;
+    transition: .30s ease;
+}
+
+.survery-form .buttons button:first-child{
+    background-color: #979797;
+}
+
+.survery-form .buttons button:first-child:hover{
+    background-color: #8a8989;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.survery-form .buttons button:hover{
+    background: #2a83be;
+    box-shadow:  0 2px 5px #2a83be;
+    transform: translateY(-5px);
+}
+
+.satisfied-box > span,
+.improve-box > span,
+.recommended-box > span{
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.satisfied-box .reaction-box ,
+.improve-box .reaction-box ,
+.recommended-box .reaction {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:.8rem 0 2rem 0;
+}
+
+.satisfied-box .reaction-box .box,
+.recommended-box .reaction .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    height: 100px;
+    width: 180px;
+    cursor: pointer;
+}
+
+.satisfied-box .reaction-box .box:hover,
+.recommended-box .reaction .box:hover{
+    background-color: rgba(204, 204, 204,.20);
+}
+
+.satisfied-box .reaction-box .box i,
+.recommended-box .reaction .box i{
+    font-size: 2.2rem;
+    margin-bottom: .5rem;
+    color: #F39C12;
+}
+
+.satisfied-box .reaction-box .box span,
+.recommended-box .reaction .box span{
+    display: inline-block;
+    font-size: 1rem;
+    color: #333;
+}
+
+.improve-box .input-box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.improve-box .input-box .box{
+    height:70px;
+    width:250px;
+    line-height: 70px;
+    margin: .6rem 0;
+    border-radius: 10px;
+    cursor: pointer;
+    text-wrap: nowrap;
+    text-align: center;
+    border: 2px solid #ccc;
+    background-color: rgba(204, 204, 204,.20);
+}
+
+.improve-box .input-box .box input{
+    height:20px;
+    aspect-ratio: 1;
+    margin:1.5rem 0 0 -1.8rem;
+}
+
+.improve-box .input-box .box label{
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+}
+
+#additional-comments .comments-boxes .form-group:not(:last-child){
+    padding-bottom:1rem;
+}
+
+#additional-comments .comments-boxes .form-group label{
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#additional-comments .comments-boxes .form-group textarea{
+    height: 130px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+#additional-comments .comments-boxes .form-group select{
+    height: 45px;
+}
+
+.feedback-container .feedbox{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 1rem 1rem;
+    border-left: 5px solid #2a83be;
+    background-color: rgba(204, 204, 204,.20);
+}
+
+.feedback-container .feedbox h3{
+    font-size: 1.2rem;
+    margin-bottom:.5rem;
+    color: #242b33;
+    font-weight: bold;
+}
+
+.feedback-container .feedbox span{
+    font-size:16px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.feedback-container .feedbox:not(:last-child){
+    margin-bottom: 1.2rem;
+}
+
+.feedback .buttons button#nextBtn4{
+    background: #2ECC71;
+}
+.feedback .buttons button#nextBtn4:hover{
+    box-shadow:0 2px 5px #2ECC71;
+}
+
+.notifications{
+    text-align: center;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.notifications i{
+    height: 100px;
+    aspect-ratio: 1;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    line-height: 100px;
+    border-radius: 50%;
+    background-color: green;
+    color: #fff;
+}
+
+.notifications h1{
+    font-size:2rem;
+    color: #242b33;
+    font-weight: bold;
+}
+
+.notifications p{
+    color: #8a8989;
+    font-weight: normal;
+    font-size:1.2rem;
+}
+
+#personal-information{
+    animation: personal .50s linear 0s ;
+}
+
+@keyframes personal {
+    from{
+        opacity: 0;
+        transform: translateY(5px);
+    }to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* use in javascript  */
+
+
+#experience.active{
+    animation: experience .50s linear 0s;
+}
+
+@keyframes experience {
+    from{
+        opacity: 0;
+        transform: translateY(5px);
+    }to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#additional-comments.active{
+    animation: additional-comments .50s linear 0s;
+}
+
+@keyframes additional-comments {
+    from{
+        opacity: 0;
+        transform: translateY(5px);
+    }to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.feedback.active{
+    animation: feedback .50s linear 0s;
+}
+
+@keyframes feedback {
+    from{
+        opacity: 0;
+        transform: translateY(5px);
+    }to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.notifications.active{
+    animation: notifications .50s linear 0s;
+}
+
+@keyframes notifications {
+    from{
+        opacity: 0;
+        transform: translateY(5px);
+    }to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.satisfied-box .reaction-box .services.active{
+    border-color: #2a83be;
+    background-color: rgba(42, 131, 190,.20);
+}
+
+.recommended_Box .reaction .recommended.active{
+    border-color: #2a83be !important;
+    background-color: rgba(42, 131, 190,.20) !important;
+}
+
+
+

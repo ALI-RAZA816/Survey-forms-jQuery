@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap CSS file -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <!-- main CSS file  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- main jQuery file  -->
+    <script src="./js/jquery.html.js"></script>
+    <!-- bootstrap JS file  -->
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <!-- fontIcon CSS file  -->
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <title>Survary Forms</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center my-5">
+                <div class="survery-form">
+                    <div class="survery-header">
+                        <h1 class="m-0"><i class="fa-solid fa-book"></i> Customer Experience Survey</h1>
+                        <span class="m-0">Your feedback helps us improve our services</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress"></div></div>
+                    <div class="survery-content form-1" id="personal-information">
+                        <h1>Personal Information</h1>
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" class="form-control" id="name">
+                            <div class="nameErr text-danger"></div>
+                        </div>
+                        <!-- form-group end  -->
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="text" class="form-control" id="email">
+                            <div class="emailErr text-danger"></div>
+                        </div>
+                        <!-- form-group end  -->
+                        <div class="form-group">
+                            <label for="age">Age Group *</label>
+                            <select name="" class="form-control" id="age">
+                                <option value="Select your age group">Select your age group</option>
+                                <option value="18-25 years">18-25 years</option>
+                                <option value="26-35 years">26-35 years</option>
+                                <option value="36-45 years">36-45 years</option>
+                                <option value="46-55 years">46-55 years</option>
+                                <option value="55+ years">55+ years</option>
+                            </select>
+                            <div class="ageErr text-danger"></div>
+                        </div>
+                        <!-- form-group end  -->
+                        <div class="buttons">
+                            <button id="prevBtn1" class="btn btn-primary" style="display: none;"><i class="fa-solid fa-arrow-left"></i> Previous Section</button>
+                            <button id="nextBtn1" class="btn btn-primary d-block ml-auto">Next Section <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <!-- button end  -->
+                    </div>
+                    <!-- form-1 personal-information end  -->
+                    <div class="survery-content form-2" id="experience" style="display: none;">
+                        <h1>Your Experience</h1>
+                        <div class="satisfied-box">
+                            <span>How satisfied are you with our service? *</span>
+                            <div class="reaction-box">
+                                <div class="box services">
+                                    <i class="fa-solid fa-face-frown"></i>
+                                    <span>Very Dissatisfied</span>
+                                </div>
+                                <!-- box end  -->
+                                 <div class="box services">
+                                    <i class="fa-solid fa-face-meh"></i>
+                                    <span>Neutral</span>
+                                </div>
+                                <!-- box end  -->
+                                 <div class="box services">
+                                    <i class="fa-solid fa-face-smile-beam"></i>
+                                    <span>Satisfied</span>
+                                </div>
+                                <!-- box end  -->
+                                 <div class="box services">
+                                    <i class="fa-solid fa-face-laugh"></i>
+                                    <span>Very Satisfied</span>
+                                </div>
+                                <!-- box end  -->
+                            </div>
+                            <div class="servicesErr text-danger"></div>
+                            <!-- reaction-box end  -->
+                        </div>
+                        <!-- satisfied-box end  -->
+                        <div class="recommended-box">
+                            <span>How likely are you to recommend us to others? *</span>
+                            <div class="reaction">
+                                <div class="box recommended">
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                    <span>Not at all</span>
+                                </div>
+                                <!-- box end  -->
+                                 <div class="box recommended">
+                                    <i class="fa-solid fa-circle-question"></i>
+                                    <span>Unlikely</span>
+                                </div>
+                                <!-- box end  -->
+                                <div class="box recommended">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Likely</span>
+                                </div>
+                                <!-- box end  -->
+                                <div class="box recommended">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <span>Very Likely</span>
+                                </div>
+                                <!-- box end  -->
+                            </div>
+                            <div class="recommendedErr text-danger"></div>
+                            <!-- reaction-box end  -->
+                        </div>
+                        <!-- recommended-box end  -->
+                        <div class="improve-box">
+                            <span>What can we improve? (Select all that apply) *</span>
+                            <div class="input-box pb-2">
+                                <div class="box form-check">
+                                    <input type="checkbox" name="improvements" id="product-quality" class="form-check-input inputField">
+                                    <label for="product-quality" class="form-check-label">Product Quality</label>
+                                </div>
+                                <div class="box form-check">
+                                    <input type="checkbox" name="improvements" id="customer-services" class="form-check-input inputField">
+                                    <label for="customer-services" class="form-check-label">Customer Service</label>
+                                </div>
+                                <div class="box form-check">
+                                    <input type="checkbox" name="improvements" id="pricing" class="form-check-inpu inputFieldt">
+                                    <label for="pricing" class="form-check-label">Pricing</label>
+                                </div>
+                                <div class="box form-check">
+                                    <input type="checkbox" name="improvements" id="delivery-speed" class="form-check-input inputField">
+                                    <label for="delivery-speed" class="form-check-label">Delivery Speed</label>
+                                </div>
+                                <div class="box form-check">
+                                    <input type="checkbox" name="improvements" id="website-experience" class="form-check-input inputField checked">
+                                    <label for="website-experience" class="form-check-label">Website Experience</label>
+                                </div>
+                                <div class="box form-check">
+                                    <input type="checkbox" name="improvements" id="other" class="form-check-input inputField">
+                                    <label for="other" class="form-check-label">Other</label>
+                                </div>
+                            </div>
+                            <!-- input-box end  -->
+                        </div>
+                        <!-- improve-box end  -->
+                        <div class="buttons">
+                            <button id="prevBtn2" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Previous Section</button>
+                            <button id="nextBtn2" class="btn btn-primary d-block ml-auto">Next Section <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <!-- buttons end  -->
+                    </div>
+                    <!-- form-3 experience end  -->
+                    <div class="survery-content form-3" id="additional-comments" style="display: none;">
+                        <h1>Your Experience</h1>
+                        <div class="comments-boxes">
+                            <div class="form-group">
+                                <label for="positiveExperience" class="form-check-label">What did you like most about our service?</label>
+                                <textarea name="" class="form-control" id="positiveExperience" placeholder="Share your positive experience..."></textarea>
+                                <div class="positiveErr text-danger"></div>
+                            </div>
+                            <!-- form-group end  -->
+                            <div class="form-group">
+                                <label for="suggestions" class="form-check-label">Do you have any suggestions for improvement?</label>
+                                <textarea name="" class="form-control" id="suggestions" placeholder="Your suggestions help us to improve..."></textarea>
+                                <div class="suggestionErr text-danger"></div>
+                            </div>
+                            <!-- form-group end  -->
+                            <div class="form-group">
+                                <label for="servicesVal" class="form-check-label">How often do you use our services? *</label>
+                                <select name="" class="form-control" id="servicesVal">
+                                    <option value="Select frequency">Select frequency</option>
+                                    <option value="Daily">Daily</option>
+                                    <option value="Weekly">Weekly</option>
+                                    <option value="Monthly">Monthly</option>
+                                    <option value="Rarely">Rarely</option>
+                                    <option value="First time">First time</option>
+                                </select>
+                                <div class="servicesErr text-danger"></div>
+                            </div>
+                            <!-- form-group end  -->
+                            <div class="buttons">
+                                <button id="prevBtn3" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Previous Section</button>
+                                <button id="nextBtn3" class="btn btn-primary d-block ml-auto">Review Answers <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                            <!-- butons end  -->
+                        </div>
+                        <!-- comments-boxes end  -->
+                    </div>
+                    <!-- form-3 additional-comments end -->
+                    <div class="feedback" style="display: none;">
+                        <h1>Review Your Answers</h1>
+                        <div class="feedback-container">
+                            <!-- summary added here by jQuery -->
+                        </div>
+                        <!-- feedback-container end  -->
+                        <div class="buttons">
+                            <button id="prevBtn4" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Previous Section</button>
+                            <button id="nextBtn4" class="btn btn-primary d-block ml-auto">Submit Survery <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <!-- feedback end  -->
+                    <div class="notifications" style="display: none;">
+                        <i class="fa-solid fa-check"></i>
+                        <h1>Thank You!</h1>
+                        <p>We truly appreciate you taking the time to complete our survey. Your feedback is valuable and will help us improve our services.You will receive a 15% discount on your next purchase as a thank you for your participation.</p>
+                    </div>
+                </div>
+                <!-- survey form end  -->
+            </div>
+            <!-- col end  -->
+        </div>
+        <!-- row end  -->
+    </div>
+    <!-- container end  -->
+    <!-- jQuery file  -->
+    <script src="./js/jquery.html.js"></script>
+    <!-- main JS file  -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
